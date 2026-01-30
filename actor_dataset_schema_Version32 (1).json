@@ -1,0 +1,34 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "server_name",
+          "server_id",
+          "members_count",
+          "online_count",
+          "tags",
+          "invite",
+          "short_description",
+          "source_url"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "server_name": { "label": "Server", "format": "text" },
+          "server_id": { "label": "Server ID", "format": "text" },
+          "members_count": { "label": "Members", "format": "text" },
+          "online_count": { "label": "Online", "format": "text" },
+          "tags": { "label": "Tags", "format": "text" },
+          "invite": { "label": "Invite", "format": "link" },
+          "short_description": { "label": "Description", "format": "text" },
+          "source_url": { "label": "Source URL", "format": "link" }
+        }
+      }
+    }
+  }
+}

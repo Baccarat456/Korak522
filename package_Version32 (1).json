@@ -1,0 +1,18 @@
+{
+  "name": "discord-server-directory-scraper",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Discord Server Directory scraper (top.gg, disboard, discord.me heuristics)",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "apify": "^3.4.2",
+    "crawlee": "^3.13.8"
+  },
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "author": "It's not you it's me",
+  "license": "ISC"
+}

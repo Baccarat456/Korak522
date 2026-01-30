@@ -1,0 +1,47 @@
+{
+  "title": "Input schema of the Discord Server Directory scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "startUrls": {
+      "title": "Start URLs",
+      "type": "array",
+      "description": "Directory or listing pages to start crawling from (e.g. https://top.gg/servers, https://disboard.org/servers).",
+      "editor": "requestListSources",
+      "prefill": [
+        { "url": "https://top.gg/servers" },
+        { "url": "https://disboard.org/servers" }
+      ]
+    },
+    "maxRequestsPerCrawl": {
+      "title": "Max Requests per Crawl",
+      "type": "integer",
+      "description": "Maximum number of requests the crawler will perform.",
+      "default": 500
+    },
+    "useBrowser": {
+      "title": "Use Playwright (for JS-heavy pages)",
+      "type": "boolean",
+      "description": "If true, use PlaywrightCrawler to render JS-driven directories (slower but more accurate).",
+      "default": false
+    },
+    "followInternalOnly": {
+      "title": "Follow internal links only",
+      "type": "boolean",
+      "description": "If true, only follow links within the same host as each start URL.",
+      "default": true
+    },
+    "checkInvites": {
+      "title": "Validate invite links",
+      "type": "boolean",
+      "description": "If true, perform an HTTP check on discovered invite links to detect expiry or redirects (may increase request count).",
+      "default": false
+    },
+    "concurrency": {
+      "title": "Concurrency",
+      "type": "integer",
+      "description": "Number of parallel requests (CheerioCrawler). Lower for politeness.",
+      "default": 10
+    }
+  }
+}
